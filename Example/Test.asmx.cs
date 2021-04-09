@@ -13,7 +13,8 @@ namespace Example
 	{
 		private readonly TestObject _testObject;
 
-		public Test() : this(new TestObject())
+		// Hacks
+		public Test() : this(AppStartDependencyInjection.GetService<TestObject>())
 		{
 		}
 
